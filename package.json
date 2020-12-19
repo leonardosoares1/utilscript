@@ -1,5 +1,5 @@
 {
-  "name": "godofredo",
+  "name": "utilscript",
   "version": "1.0.0",
   "description": "Pacote com funções de utilidades para desenvolvedores.",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leonardosoares1/godofredo.git"
+    "url": "git+https://github.com/leonardosoares1/utilscript.git"
   },
   "keywords": ["brasil", "utils", "cpf"],
   "author": "Leo Soares",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leonardosoares1/godofredo/issues"
+    "url": "https://github.com/leonardosoares1/utilscript/issues"
   },
   "types": "index.d.ts",
-  "homepage": "https://github.com/leonardosoares1/godofredo#readme"
+  "homepage": "https://github.com/leonardosoares1/utilscript#readme"
 }
