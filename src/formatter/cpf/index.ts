@@ -1,9 +1,9 @@
-interface ICpfDTO  {
+interface IFormatterCpfDTO {
   defaultValue?: string;
-  value?: string ;
+  value: string;
 }
 
-function cpf({ defaultValue = '', value }: ICpfDTO): string {
+function cpf({ defaultValue = '', value }: IFormatterCpfDTO): string {
   if (!value) {
     return defaultValue;
   }
