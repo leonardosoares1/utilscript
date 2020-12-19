@@ -1,14 +1,9 @@
-interface IFormatterCpfDTO {
-  defaultValue?: string;
-  value: string;
-}
-
-function cpf({ defaultValue = '', value }: IFormatterCpfDTO): string {
+function cpf({ defaultValue = '', value }) {
   if (!value) {
     return defaultValue;
   }
 
-  const valueWithoutMask = value.replace(/[^0-9]/g, '');
+  const valueWithoutMask = String(value).replace(/[^0-9]/g, '');
 
   const cpfFormatted = valueWithoutMask
     .replace(/(\d{3})(\d)/, '$1.$2')
@@ -18,4 +13,6 @@ function cpf({ defaultValue = '', value }: IFormatterCpfDTO): string {
   return cpfFormatted;
 }
 
-export default { cpf };
+const formatter = { cpf }
+
+export default { formatter };
