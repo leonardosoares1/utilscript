@@ -1,6 +1,6 @@
 {
   "name": "utilscript",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Pacote com funções de utilidades para desenvolvedores.",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,7 @@
   },
   "keywords": [
     "brasil",
-    "utils",
-    "cpf"
+    "utils"
   ],
   "author": "Leo Soares",
   "license": "ISC",

@@ -1,18 +1,33 @@
-function cpf({ defaultValue = '', value }) {
-  if (!value) {
-    return defaultValue;
-  }
+const formatterCnpj = require('./src/formatters/cnpj');
+const formatterCpf = require('./src/formatters/cpf');
+const formatterMoney = require('./src/formatters/money');
+const formatterPhone = require('./src/formatters/phone');
+const formatterPostalCode = require('./src/formatters/postalCode');
 
-  const valueWithoutMask = String(value).replace(/[^0-9]/g, '');
+const helperCapitalizeFirstLetter = require('./src/helpers/capitalizeFirstLetter');
+const helperGetValidationErrorsYup = require('./src/helpers/getValidationErrorsYup');
+const helperMoneyTyping = require('./src/helpers/moneyTyping');
 
-  const cpfFormatted = valueWithoutMask
-    .replace(/(\d{3})(\d)/, '$1.$2')
-    .replace(/(\d{3})(\d)/, '$1.$2')
-    .replace(/(\d{3})(\d)/, '$1-$2');
+const validatorCnpj = require('./src/validators/cnpj');
+const validatorCpf = require('./src/validators/cpf');
 
-  return cpfFormatted;
-}
+const formatters = {
+  cnpj: formatterCnpj,
+  cpf: formatterCpf,
+  money: formatterMoney,
+  phone: formatterPhone,
+  postalCode: formatterPostalCode,
+};
 
-const formatter = { cpf }
+const helpers = {
+  capitalizeFirstLetter: helperCapitalizeFirstLetter,
+  getValidationErrorsYup: helperGetValidationErrorsYup,
+  moneyTyping: helperMoneyTyping,
+};
 
-export default { formatter };
+const validators = {
+  cnpj: validatorCnpj,
+  cpf: validatorCpf,
+};
+
+module.exports = { formatters, helpers, validators }
